@@ -1,5 +1,6 @@
 /* Basics */
 
+
 body {
     margin: 0;
 	padding: 0;
@@ -7,9 +8,9 @@ body {
 	width: auto;
 }
 body #page {
-    background: azure-blue;
+    background: url(images/plaster1_back.jpeg) repeat;
     margin: 0;
-    overflow: scroll;
+    overflow: hidden;
     padding: 0;
     width: auto;
     z-index: 3;
@@ -18,7 +19,9 @@ img {
     border: none;
 }
 
-/* Header */
+
+/* Header & Drop Menu*/
+
 
 #header div ul {
 	list-style: none;
@@ -38,7 +41,7 @@ img {
 	display: block;
 	font-family: Arial;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 50px;
 	margin: 0;
 	min-height: 50px;
@@ -47,16 +50,30 @@ img {
 	text-transform: uppercase;
 }
 
-#header div ul li a:hover{
+#header div ul li a:hover {
     background-color: skyblue;
     color: #777777;
+}
+
+.drop {
+	display: block;
+    background-color: aquamarine;
+	left: -99999px; 
+	position: absolute;
+	top: 50px;
+	width: auto;
+	z-index: 150;
+}
+
+.menu:hover .drop {
+    left: 500px;
 }
 
 
 /* Body-Home Styles */
 
+
 #body {
-	background: #ededed;
 	margin: 0;
 	min-height: 800px;
 	overflow: hidden;
@@ -69,15 +86,7 @@ img {
     height: 1000px;
 }
 
-#body.home .intro {
-    /* nothing atm */
-}
-
-#body.home .intro div {
-    
-}
-
-#body.home .intro div h1 {
+.home .intro div h1 {
     font-family: Arial;
     font-size: 44px;
     font-weight: bold;
@@ -85,101 +94,153 @@ img {
     background-color: none;
     padding: 0 36px;
     margin: 4px;
+    text-align: center;
 }
 
-#body.home .intro div h2 {
+.home .intro div h2 {
     font-family: Arial;
     font-size: 24px;
     font-weight: bolder;
     font-style: italic;
     padding: 0 36px;
     margin: auto;
+    text-align: center;
 }
 
-#body.home .intro div h3 {
+.home .intro div h3 {
     font-family: Arial;
     font-size: 24px;
     font-weight: bold;
     padding: 0 36px;
-    margin: 44px;;
-}
+    margin: 44px;
+    text-align: center;
+} 
 
-#body.home .intro div 
-
-#body.home .intro div a.more {
+.home .intro div a.more {
     padding: 0 36px;
     font-family: Arial;
     font-size: 24px;
 }
 
-#body.home .body {
+.home .body {
     background-color: #cccccc;
     overflow: hidden;
 }
 
-#body.home .body div ul li a img {
-    
-}
 
-#body.home .body div h1 {
+.home .body div h1 {
     font-family: Arial;
     margin: 10px 36px;
 }
 
-#body.home .body div p {
+.home .body div p {
     font-family: Arial;
     margin: 12px 36px;
-}
-
-#body .footer {
-    background: #b5eaf5;
+    padding: 0 0;
 }
 
 
-#body .footer div h1 {
-    font-family: Arial;
+/* Footer Styles */
+
+
+.connect {
+    background-color: lightcoral;
+    margin: 0px 0px;
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+}
+
+.connect div {
+    margin: 0;
+	max-width: 960px;
+	overflow: hidden;
+	padding: 8px 0 14px;   
+}
+
+.connect div h1 {
     font-size: 24px;
-    padding: 12px 36px;
-}
-
-#body .footer div p {
     font-family: Arial;
     color: black;
+    padding: 0px 0px 0px 30px;
+}
+
+.icon {
+    padding: 15px;
+    float: left;
+    font-size: 30px;
+    width: 35px;
+    text-align: center;
+    background-position: center;
+    text-decoration: none;
+    text-indent: -99999px;
+    margin: 0px 30px;
+    height: 36px;
+    display: inline-block;
+}
+
+.footer div a.linkedin {
+    background: url(images/linkedin.png) no-repeat;
+}
+
+.footer div a.handshake {
+    background: url(images/handshake.png) no-repeat;
+}
+
+.footer div a.instagram {
+    background: url(images/instagram.png) no-repeat;
+}
+
+.footer div a.facebook {
+    background: url(images/facebook.png) no-repeat;
+}
+
+.linkedin:hover {
+    opacity: 0.7;
+}
+
+.handshake:hover {
+    opacity: 0.7;
+}
+
+.instagram:hover {
+    opacity: 0.7;
+}
+
+.facebook:hover {
+    opacity: 0.7;
+}
+
+
+/* Footnote Style */
+
+
+.footnote {
     background-color: white;
-    font-size: 16px;
-    padding: 36px 36px;
+    margin: 0;
+    min-height: 84px;
+    overflow: hidden;
+    padding: 0;
+	width: auto;
 }
 
-/* Body-Rest of Pages Formatting */
-
-#body .body div h1 {
-    font-family: Arial;
-    margin: 10px 36px;
+.footnote div {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 30px 0 ;
+	width: auto;
 }
 
-
-
-
-
-
-
-
-
-/* Footer */
-
-#footer .connect div div a {
-	background: #b5eaf5;
-    font-family: Arial;
-    color: black;
-	float: left;
-    margin: 0 36px;
-    
+.footnote div p {
+	color: #000000;
+	display: block;
+	font-family: Arial;
+	font-size: 12px;
+	margin: auto;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: auto;
 }
-
-
-
-
-
 
 
 
